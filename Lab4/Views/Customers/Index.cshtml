@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Lab4.Customer>
+@{
+    ViewData["title"] = "Customers";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>TABLE CUSTOMERS</title>
+</head>
+<body>
+    <h3 align="center">Заказчики:</h3>
+    <table border="1" align="center">
+        <tr>
+            <td>Название</td>
+            <td>Адрес</td>
+            <td>Номер телефона</td>
+        </tr>
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>@customer.CustomerName</td>
+                <td>@customer.CustomerAddress</td>
+                <td>@customer.TelNumber</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Lab4.Product>
+@{
+    ViewData["title"] = "Products";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>TABLE PRODUCTS</title>
+</head>
+<body>
+    <h3 align="center">Товары:</h3>
+    <table border="1" align="center">
+        <tr>
+            <td>Название</td>
+            <td>Хранение</td>
+            <td>Упаковка</td>
+        </tr>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.ProductName</td>
+                <td>@product.Storage</td>
+                <td>@product.Packaging</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
